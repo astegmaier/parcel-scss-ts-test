@@ -4,18 +4,23 @@
   "private": true,
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html --cache-dir .parcel-cache",
+    "build": "yarn build:scss-types && parcel build src/index.html --cache-dir .parcel-cache",
+    "build:scss-types": "tsm src --nameFormat none --exportType default",
+    "watch:scss-types": "yarn build:scss-types --watch",
+    "check-types": "tsc",
     "clean": "rimraf dist && rimraf .parcel-cache",
     "serve": "http-server dist",
     "format": "prettier --write src/**/* -u --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-nightly.866",
     "@parcel/validator-typescript": "2.0.0-nightly.866",
     "http-server": "^13.0.2",
     "parcel": "2.0.0-nightly.864",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "sass": "^1.42.1",
+    "typed-scss-modules": "^4.1.1",
     "typescript": "^4.4.3"
   }
 }

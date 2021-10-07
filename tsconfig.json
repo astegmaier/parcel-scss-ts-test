@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "strict": true /* Enable all strict type-checking options. */
+  }
+}
