@@ -1,0 +1,21 @@
+{
+  "name": "parcel-scss-ts-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --cache-dir .parcel-cache",
+    "clean": "rimraf dist && rimraf .parcel-cache",
+    "serve": "http-server dist",
+    "format": "prettier --write src/**/* -u --no-error-on-unmatched-pattern"
+  },
+  "devDependencies": {
+    "@parcel/validator-typescript": "2.0.0-nightly.866",
+    "http-server": "^13.0.2",
+    "parcel": "2.0.0-nightly.864",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.42.1",
+    "typescript": "^4.4.3"
+  }
+}
